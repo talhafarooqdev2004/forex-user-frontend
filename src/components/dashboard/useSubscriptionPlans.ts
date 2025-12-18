@@ -1,78 +1,30 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import useSWR from 'swr';
+import { packageService } from '@/services/packageService';
+import { API_ENDPOINTS } from '@/lib/config';
+import { PackageDTO } from '@/types/results/PackagesIndexResultDTO';
+import { useLanguage } from '@/components/LanguageProvider';
 
-type SubscriptionPlan = {
-    id: number;
-    planType: string;
-    displayName: string;
-    badgeLabel: string;
-    taxInclusivePrice: number;
-    billingCycle: string;
-    originalPrice: number;
-    discountedPrice: number;
-    activeDays: number;
-    bonusFreeDays: number;
+interface UseSubscriptionPlansOptions {
+    fallbackData?: PackageDTO[];
 }
 
-// Static data for demo
-const subscriptionPlansData: SubscriptionPlan[] = [
-    {
-        id: 1,
-        planType: 'silver',
-        displayName: 'Silver',
-        badgeLabel: 'SILVER',
-        taxInclusivePrice: 25,
-        billingCycle: 'mon',
-        originalPrice: 35,
-        discountedPrice: 25,
-        activeDays: 30,
-        bonusFreeDays: 10,
-    },
-    {
-        id: 2,
-        planType: 'gold',
-        displayName: 'Gold',
-        badgeLabel: 'GOLD',
-        taxInclusivePrice: 85,
-        billingCycle: 'mon',
-        originalPrice: 85,
-        discountedPrice: 60,
-        activeDays: 60,
-        bonusFreeDays: 20,
-    },
-    {
-        id: 3,
-        planType: 'platinum',
-        displayName: 'Platinum',
-        badgeLabel: 'PLATINUM',
-        taxInclusivePrice: 120,
-        billingCycle: 'mon',
-        originalPrice: 150,
-        discountedPrice: 120,
-        activeDays: 90,
-        bonusFreeDays: 20,
-    },
-];
+export function useSubscriptionPlans(options?: UseSubscriptionPlansOptions) {
+    const { fallbackData } = options || {};
+    const { currentLanguage } = useLanguage();
+    const locale = currentLanguage || 'en';
 
-// Simple delay function for demo
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    const { data, error, isLoading } = useSWR<PackageDTO[]>(
+        `${API_ENDPOINTS.PACKAGES}?locale=${locale}`,
+        () => packageService.getPackages(locale),
+        {
+            revalidateOnFocus: true,
+            revalidateOnReconnect: true,
+            dedupingInterval: 5000,
+            fallbackData,
+        }
+    );
 
-// Simple hook with loading state for demo
-export function useSubscriptionPlans() {
-    const [subscriptionPlans, setSubscriptionPlans] = useState<SubscriptionPlan[] | null>(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const loadData = async () => {
-            setLoading(true);
-            await delay(1000);
-            setSubscriptionPlans(subscriptionPlansData);
-            setLoading(false);
-        };
-
-        loadData();
-    }, []);
-
-    return { subscriptionPlans, loading };
+    return { subscriptionPlans: data, loading: isLoading, isError: error };
 } 

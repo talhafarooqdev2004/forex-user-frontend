@@ -1,39 +1,20 @@
-"use client";
+import { educationService } from "@/services/educationService";
+import HomeClient from "./HomeClient";
+import { cookies } from "next/headers";
 
-import { FundamentalAnalysisSection } from '@/components/FundamentalAnalysisSection';
-import { FundamentalEdgeInsight } from '@/components/insights/FundamentalEdgeInsight';
-import { FundmentalHeatmap } from '@/components/insights/FundamentalHetmap';
-import { CurrencyFundamental } from '@/components/insights/CurrencyFundamental';
-import { NewsEvents } from '@/components/insights/NewsEvents';
-import { MarketOverviewSection } from '@/components/insights/MarketOverviewSection';
-import { TechnicalAnalysisSection } from '@/components/insights/TechnicalAnalysisSection';
-import { TechnicalIndicatorsSection } from '@/components/insights/TechnicalIndicatorsSection';
-import { EducationSection } from '@/components/education/EducationSection';
-import TechnicalHeatmap from '@/components/insights/TechnicalHeatmap';
-import { CurrencyStrengthMeter } from '@/components/insights/CurrencyStrengthMeter';
-import PageWithHeroLayout from '@/components/layouts/PageWithHeroLayout';
-import { HeroSectionContentText } from '@/components/HeroSectionContentText';
-import { HeroSectionContentSecondaryText } from '@/components/HeroSectionContentSecondaryText';
+export default async function HomePage() {
+    const cookieStore = await cookies();
+    const locale = cookieStore.get('locale')?.value ?? "en";
 
-export default function Home() {
+    const educations = await educationService.getEducations(locale);
+
     return (
         <>
             <main>
-                <PageWithHeroLayout alignItems='flex-start'>
-                    <HeroSectionContentText />
-                    <HeroSectionContentSecondaryText />
-                </PageWithHeroLayout>
-                <FundamentalAnalysisSection />
-                <FundamentalEdgeInsight />
-                <FundmentalHeatmap />
-                <CurrencyFundamental />
-                <NewsEvents />
-                <MarketOverviewSection />
-                <TechnicalAnalysisSection />
-                <TechnicalIndicatorsSection />
-                <EducationSection />
-                <TechnicalHeatmap />
-                <CurrencyStrengthMeter />
+                <HomeClient
+                    initialEducations={educations}
+                    initialLocale={locale}
+                />
             </main>
         </>
     );

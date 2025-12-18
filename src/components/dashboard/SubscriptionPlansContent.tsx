@@ -5,11 +5,16 @@ import MembershipSubscriptionPlanCardPlaceholder from './MembershipSubscriptionP
 import MembershipSubscriptionPlansList from './MembershipSubscriptionPlansList';
 import { useSubscriptionPlans } from './useSubscriptionPlans';
 import styles from './MembershipSubscriptionPlans.module.scss';
+import { PackageDTO } from '@/types/results/PackagesIndexResultDTO';
 
-export default function SubscriptionPlansContent() {
-    const { subscriptionPlans, loading } = useSubscriptionPlans();
+interface SubscriptionPlansContentProps {
+    initialData: PackageDTO[];
+}
 
-    if (loading) {
+export default function SubscriptionPlansContent({ initialData }: SubscriptionPlansContentProps) {
+    const { subscriptionPlans, loading } = useSubscriptionPlans({ fallbackData: initialData });
+
+    if (loading && !subscriptionPlans) {
         return (
             <MembershipSubscriptionPlansList className={styles["membership-subscription-plans__list"]}>
                 {[1, 2, 3].map((index) => (

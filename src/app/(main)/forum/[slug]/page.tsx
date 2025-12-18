@@ -1,17 +1,24 @@
-"use client";
+import { cookies } from 'next/headers';
+import PostClient from './PostClient';
+import { postService } from '@/services/Forum/postService';
+import { topicService } from '@/services/Forum/topicService';
 
-import { use } from 'react';
-import PageWithHeroLayout from "@/components/layouts/PageWithHeroLayout";
-import SingleForumPostLayout from "@/components/forum/SingleForumPostLayout";
+export default async function ForumPostPage({
+    params
+}: {
+    params: Promise<{ slug: string }>
+}) {
+    const { slug } = await params;
 
-export default function ForumPostPage({ params }: { params: Promise<{ slug: string }> }) {
-    const resolvedParams = use(params);
+    const cookieStore = await cookies();
+    const locale = cookieStore.get('locale')?.value || process.env.NEXT_PUBLIC_DEFAULT_LOCALE;
 
-    return (
-        <>
-            <PageWithHeroLayout alignItems="flex-start" stickyAside={true}>
-                <SingleForumPostLayout slug={resolvedParams.slug} />
-            </PageWithHeroLayout>
-        </>
-    );
-} 
+    const topics = await topicService.getTopics(locale);
+    const post = await postService.getPostBySlug(slug, locale);
+
+    if (!post) {
+        throw new Error('Post Not Found!');
+    }
+
+    return <PostClient initialTopics={topics} initialPost={post} slug={slug} />;
+}

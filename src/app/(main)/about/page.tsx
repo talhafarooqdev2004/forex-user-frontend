@@ -1,72 +1,18 @@
-"use client";
+import AboutClient from './AboutClient';
+import {
+    cookies
+} from 'next/headers';
+import {
+    pageContentService
+} from '@/services/pageContentService';
 
-import { useTranslations } from 'next-intl';
-import styles from './about.module.scss';
+export default async function About() {
+    const cookieStore = await cookies();
+    const locale = cookieStore.get('locale')?.value || 'en';
 
-export default function About() {
-    const t = useTranslations('about');
+    const aboutContent = await pageContentService.getPageContent('about_us', locale);
 
     return (
-        <>
-            <main className={styles.aboutMain}>
-                <section className={styles.aboutHero}>
-                    <div className={styles.aboutHeroContent}>
-                        <h1 className={styles.aboutTitle}>{t('title')}</h1>
-                        <p className={styles.aboutSubtitle}>{t('subtitle')}</p>
-                    </div>
-                </section>
-
-                <section className={styles.aboutContent}>
-                    <div className={styles.aboutSection}>
-                        <h2 className={styles.sectionTitle}>{t('ourMission.title')}</h2>
-                        <p className={styles.sectionText}>
-                            {t('ourMission.description')}
-                        </p>
-                    </div>
-
-                    <div className={styles.aboutSection}>
-                        <h2 className={styles.sectionTitle}>{t('whatWeDo.title')}</h2>
-                        <p className={styles.sectionText}>
-                            {t('whatWeDo.description')}
-                        </p>
-                        <ul className={styles.featureList}>
-                            <li>{t('whatWeDo.features.fundamentalAnalysis')}</li>
-                            <li>{t('whatWeDo.features.technicalIndicators')}</li>
-                            <li>{t('whatWeDo.features.marketInsights')}</li>
-                            <li>{t('whatWeDo.features.educationalResources')}</li>
-                        </ul>
-                    </div>
-
-                    <div className={styles.aboutSection}>
-                        <h2 className={styles.sectionTitle}>{t('whyChooseUs.title')}</h2>
-                        <div className={styles.advantagesGrid}>
-                            <div className={styles.advantageCard}>
-                                <h3 className={styles.advantageTitle}>{t('whyChooseUs.advantages.expertise.title')}</h3>
-                                <p className={styles.advantageText}>{t('whyChooseUs.advantages.expertise.description')}</p>
-                            </div>
-                            <div className={styles.advantageCard}>
-                                <h3 className={styles.advantageTitle}>{t('whyChooseUs.advantages.realTime.title')}</h3>
-                                <p className={styles.advantageText}>{t('whyChooseUs.advantages.realTime.description')}</p>
-                            </div>
-                            <div className={styles.advantageCard}>
-                                <h3 className={styles.advantageTitle}>{t('whyChooseUs.advantages.comprehensive.title')}</h3>
-                                <p className={styles.advantageText}>{t('whyChooseUs.advantages.comprehensive.description')}</p>
-                            </div>
-                            <div className={styles.advantageCard}>
-                                <h3 className={styles.advantageTitle}>{t('whyChooseUs.advantages.support.title')}</h3>
-                                <p className={styles.advantageText}>{t('whyChooseUs.advantages.support.description')}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.aboutSection}>
-                        <h2 className={styles.sectionTitle}>{t('ourTeam.title')}</h2>
-                        <p className={styles.sectionText}>
-                            {t('ourTeam.description')}
-                        </p>
-                    </div>
-                </section>
-            </main>
-        </>
+        <AboutClient initialData={aboutContent} initialLocale={locale} />
     );
 } 

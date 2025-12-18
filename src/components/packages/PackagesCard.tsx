@@ -1,36 +1,83 @@
-import styles from './PackagesCard.module.scss';
-import { PackagesCardProps } from '../../types/PackagesCardProps';
+"use client";
 
-export default function PackagesCard(packagesCard: PackagesCardProps) {
+import { useState } from 'react';
+import styles from './PackagesCard.module.scss';
+import { useTranslations } from 'next-intl';
+import { PackageDTO } from '@/types/results/PackagesIndexResultDTO';
+import { useAuth } from '@/contexts/AuthContext';
+import { useAuthModal } from '@/contexts/AuthModalContext';
+import PaymentGatewayModal from './PaymentGatewayModal';
+
+export default function PackagesCard(packageDTO: PackageDTO) {
+    const t = useTranslations("package");
+    const { user } = useAuth();
+    const { openModal } = useAuthModal();
+    const [showPaymentModal, setShowPaymentModal] = useState(false);
+
+    // Convert hours → days (1 day = 24 hours)
+    const durationDays = Math.floor(packageDTO.durationHours / 24);
+    const freeTrialDays = Math.floor(packageDTO.freeTrialHours / 24);
+    const planType = packageDTO.translation.name.toLowerCase();
+
+    const handleSubscribe = () => {
+        if (!user) {
+            // Show login modal if user is not logged in
+            openModal('login');
+            return;
+        }
+
+        // Show payment gateway selection modal
+        setShowPaymentModal(true);
+    };
+
     return (
         <>
-            <div className={`${styles["packages-card"]} ${styles[packagesCard.planType]}`}>
+            <div className={`${styles["packages-card"]} ${styles[planType]}`}>
                 <header className={styles["packages-card__header"]}>
-                    <h1 className={styles["packages-card__name"]}>{packagesCard.displayName} Membership</h1>
-                    <span className={styles["packages-card__badge"]}>{packagesCard.badgeLabel}</span>
+                    <h1 className={styles["packages-card__name"]}>
+                        {packageDTO.translation.name} {t("membership")}
+                    </h1>
+                    <span className={styles["packages-card__badge"]}>
+                        {packageDTO.translation.name.toUpperCase()}
+                    </span>
                 </header>
+
                 <div className={styles["packages-card__body"]}>
-                    <span className={styles["packages-card__tax-price"]}>Tax Included: USD {packagesCard.taxInclusivePrice}</span>
                     <div className={styles["packages-card__prices"]}>
                         <span className={styles["packages-card__discounted-price"]}>
-                            USD 25
-                            <span className={styles["packages-card__price-period"]}>/{packagesCard.billingCycle}</span>
-                            <span className={styles["packages-card__original-price"]}>USD {packagesCard.originalPrice}</span>
+                            {t("USD")} {packageDTO.price}
+                            <span className={styles["packages-card__price-period"]}> /{t("monthly")}</span>
                         </span>
                     </div>
-                    <span className={styles["packages-card__duration"]}>Duration: {packagesCard.activeDays} Days + {packagesCard.activeDays} Days (Free)</span>
+
+                    <span className={styles["packages-card__duration"]}>
+                        {t("duration")}: {durationDays} {t("days")} + {freeTrialDays} {t("days")} ({t("free")})
+                    </span>
+
                     <textarea
                         placeholder='Text Here'
-                        name=""
-                        id=""
+                        defaultValue={packageDTO.translation.detail}
                         className={styles["packages-card__text-box"]}
-                    >
-                    </textarea>
+                        readOnly
+                    />
                 </div>
+
                 <footer className={styles["packages-card__footer"]}>
-                    <button className={styles["packages-card__subscribe-btn"]}>SUBSCRIBE</button>
+                    <button 
+                        className={styles["packages-card__subscribe-btn"]}
+                        onClick={handleSubscribe}
+                    >
+                        {t("subscribe")}
+                    </button>
                 </footer>
             </div>
+
+            <PaymentGatewayModal
+                show={showPaymentModal}
+                onHide={() => setShowPaymentModal(false)}
+                packageId={packageDTO.id}
+                packagePrice={parseFloat(packageDTO.price.toString())}
+            />
         </>
     );
 }

@@ -1,0 +1,144 @@
+@use "../../styles/mixins.scss" as *;
+
+.modalDialog {
+    max-width: 60rem !important;
+}
+
+.modalContent {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 1.6rem;
+    padding: 3rem;
+    position: relative;
+    color: #ffffff;
+
+    @include mobile {
+        padding: 2rem;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.modalHeader {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include mobile {
+        font-size: 2rem;
+    }
+}
+
+.errorMessage {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.loading,
+.noGateways {
+    text-align: center;
+    padding: 3rem;
+    color: #9ca3af;
+    font-size: 1.6rem;
+}
+
+.gatewaysList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.gatewayItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    border-radius: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &.selected {
+        background-color: rgba(1, 144, 66, 0.2);
+        border-color: #019042;
+    }
+}
+
+.gatewayInfo {
+    flex: 1;
+}
+
+.gatewayName {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.gatewayDescription {
+    font-size: 1.4rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.radioButton {
+    input[type="radio"] {
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        accent-color: #019042;
+    }
+}
+
+.proceedButton {
+    width: 100%;
+    background-color: #019042;
+    border: none;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover:not(:disabled) {
+        background-color: #017a35;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+

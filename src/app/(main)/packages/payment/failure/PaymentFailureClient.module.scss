@@ -1,0 +1,123 @@
+@use "../../../../styles/mixins.scss" as *;
+
+.failureContainer {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 3rem;
+
+    @include mobile {
+        padding: 2rem 1rem;
+    }
+}
+
+.failureContent {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1.6rem;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    @include mobile {
+        padding: 3rem 2rem;
+    }
+}
+
+.failureIcon {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: #dc2626;
+    color: #ffffff;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-weight: bold;
+
+    @include mobile {
+        width: 6rem;
+        height: 6rem;
+        font-size: 4rem;
+    }
+}
+
+.failureTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+
+    @include mobile {
+        font-size: 2.4rem;
+    }
+}
+
+.failureMessage {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+
+    @include mobile {
+        font-size: 1.4rem;
+    }
+}
+
+.transactionId {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+    font-family: monospace;
+
+    @include mobile {
+        font-size: 1.2rem;
+    }
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.retryButton,
+.supportButton {
+    padding: 1.5rem 3rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+
+    @include mobile {
+        padding: 1.2rem 2rem;
+        font-size: 1.4rem;
+    }
+}
+
+.retryButton {
+    background-color: #019042;
+    color: #ffffff;
+
+    &:hover {
+        background-color: #017a35;
+    }
+}
+
+.supportButton {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+}
+

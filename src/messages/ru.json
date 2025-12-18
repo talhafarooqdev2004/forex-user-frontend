@@ -254,6 +254,7 @@
         },
         "education": {
             "title": "ОБУЧЕНИЕ",
+            "learnMore": "Узнать больше",
             "shortDescription": {
                 "before": "Вот наш",
                 "highlight1": "совет",
@@ -305,6 +306,36 @@
         "phone": "Телефон",
         "allRightsReserved": "Все права защищены."
     },
+    "package": {
+        "USD": "Доллар США",
+        "duration": "Продолжительность",
+        "free": "Бесплатно",
+        "days": "Дней",
+        "monthly": "Ежемесячно",
+        "membership": "Членство",
+        "subscribe": "Подписаться",
+        "selectPaymentMethod": "Выберите Способ Оплаты",
+        "proceedToPayment": "Перейти к Оплате",
+        "orderSummary": "Сводка Заказа",
+        "paymentMethod": "Способ Оплаты",
+        "back": "Вернуться к Пакетам",
+        "processing": "Обработка...",
+        "enterCardDetails": "Введите Данные Карты",
+        "redirectingToJazzCash": "Перенаправление в JazzCash",
+        "jazzcashRedirectMessage": "Вы будете перенаправлены в JazzCash для завершения оплаты.",
+        "continueToJazzCash": "Продолжить в JazzCash",
+        "paymentSuccess": "Оплата Успешна!",
+        "paymentSuccessMessage": "Ваш платеж был успешно обработан. Ваша подписка теперь активна.",
+        "transactionId": "ID Транзакции",
+        "goToDashboard": "Перейти в Панель",
+        "backToPackages": "Вернуться к Пакетам",
+        "redirectingIn": "Перенаправление в панель через",
+        "seconds": "секунд",
+        "paymentFailed": "Оплата Не Удалась",
+        "paymentFailedMessage": "К сожалению, ваш платеж не может быть обработан. Пожалуйста, попробуйте снова или свяжитесь со службой поддержки.",
+        "tryAgain": "Попробовать Снова",
+        "contactSupport": "Связаться с Поддержкой"
+    },
     "forum": {
         "commentModal": {
             "title": "КОММЕНТАРИЙ!",
@@ -354,5 +385,18 @@
             "title": "Наша команда",
             "description": "Наша разнообразная команда аналитиков, разработчиков и финансовых экспертов работает вместе, чтобы предоставить вам самые точные и действенные торговые идеи. С десятилетиями совместного опыта на валютных рынках, мы понимаем, что требуется для успеха в этой динамичной среде."
         }
+    },
+    "dashboard": {
+        "scoreBoard": "Таблица результатов",
+        "userRole": "Пользователь",
+        "profile": "Профиль",
+        "settings": "Настройки",
+        "notifications": "Уведомления",
+        "accountOverview": "Обзор аккаунта",
+        "subscription": "Подписка",
+        "membership": "Членство",
+        "tradingNews": "Торговые новости",
+        "welcome": "Добро пожаловать",
+        "backToDashboard": "Вернуться к панели управления"
     }
 }

@@ -1,13 +1,18 @@
-import styles from './MembershipSubscriptionPlans.module.scss';
 import SubscriptionPlansContent from './SubscriptionPlansContent';
+import styles from './MembershipSubscriptionPlans.module.scss';
+import { PackageDTO } from '@/types/results/PackagesIndexResultDTO';
 
-export default function MembershipSubscriptionPlans() {
+interface MembershipSubscriptionPlansProps {
+    subscriptionPackages: PackageDTO[];
+}
+
+export default function MembershipSubscriptionPlans({ subscriptionPackages }: MembershipSubscriptionPlansProps) {
     return (
-        <>
-            <section className={styles["membership-subscription-plans"]}>
+        <div className={styles["membership-subscription-plans"]}>
+            <header className={styles["membership-subscription-plans__header"]}>
                 <h1 className={styles["membership-subscription-plans__heading"]}>Membership Subscription Plans</h1>
-                <SubscriptionPlansContent />
-            </section>
-        </>
+            </header>
+            <SubscriptionPlansContent initialData={subscriptionPackages} />
+        </div>
     );
 }

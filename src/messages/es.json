@@ -254,6 +254,7 @@
         },
         "education": {
             "title": "EDUCACIÓN",
+            "learnMore": "Aprende más",
             "shortDescription": {
                 "before": "Aquí está nuestro",
                 "highlight1": "consejo",
@@ -304,6 +305,36 @@
         "email": "Correo Electrónico",
         "phone": "Teléfono",
         "allRightsReserved": "Todos los derechos reservados."
+    },
+    "package": {
+        "USD": "USD",
+        "duration": "Duración",
+        "free": "Gratis",
+        "days": "Días",
+        "monthly": "Mensual",
+        "membership": "Membresía",
+        "subscribe": "Suscribirse",
+        "selectPaymentMethod": "Seleccionar Método de Pago",
+        "proceedToPayment": "Proceder al Pago",
+        "orderSummary": "Resumen del Pedido",
+        "paymentMethod": "Método de Pago",
+        "back": "Volver a Paquetes",
+        "processing": "Procesando...",
+        "enterCardDetails": "Ingresar Detalles de la Tarjeta",
+        "redirectingToJazzCash": "Redirigiendo a JazzCash",
+        "jazzcashRedirectMessage": "Serás redirigido a JazzCash para completar tu pago.",
+        "continueToJazzCash": "Continuar a JazzCash",
+        "paymentSuccess": "¡Pago Exitoso!",
+        "paymentSuccessMessage": "Tu pago ha sido procesado exitosamente. Tu suscripción ahora está activa.",
+        "transactionId": "ID de Transacción",
+        "goToDashboard": "Ir al Panel",
+        "backToPackages": "Volver a Paquetes",
+        "redirectingIn": "Redirigiendo al panel en",
+        "seconds": "segundos",
+        "paymentFailed": "Pago Fallido",
+        "paymentFailedMessage": "Desafortunadamente, tu pago no pudo ser procesado. Por favor intenta de nuevo o contacta soporte.",
+        "tryAgain": "Intentar de Nuevo",
+        "contactSupport": "Contactar Soporte"
     },
     "forum": {
         "commentModal": {

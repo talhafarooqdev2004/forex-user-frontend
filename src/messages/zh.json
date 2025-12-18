@@ -258,6 +258,7 @@
         },
         "education": {
             "title": "教育",
+            "learnMore": "了解更多",
             "shortDescription": {
                 "before": "这是我们关于",
                 "highlight1": "有效交易",
@@ -308,6 +309,36 @@
         "email": "邮箱",
         "phone": "电话",
         "allRightsReserved": "版权所有。"
+    },
+    "package": {
+        "USD": "美元",
+        "duration": "时长",
+        "free": "免费",
+        "days": "天",
+        "monthly": "每月",
+        "membership": "会员",
+        "subscribe": "订阅",
+        "selectPaymentMethod": "选择支付方式",
+        "proceedToPayment": "前往支付",
+        "orderSummary": "订单摘要",
+        "paymentMethod": "支付方式",
+        "back": "返回套餐",
+        "processing": "处理中...",
+        "enterCardDetails": "输入卡片详情",
+        "redirectingToJazzCash": "正在重定向到JazzCash",
+        "jazzcashRedirectMessage": "您将被重定向到JazzCash以完成付款。",
+        "continueToJazzCash": "继续到JazzCash",
+        "paymentSuccess": "支付成功！",
+        "paymentSuccessMessage": "您的付款已成功处理。您的订阅现已激活。",
+        "transactionId": "交易ID",
+        "goToDashboard": "前往仪表板",
+        "backToPackages": "返回套餐",
+        "redirectingIn": "正在重定向到仪表板，",
+        "seconds": "秒",
+        "paymentFailed": "支付失败",
+        "paymentFailedMessage": "很抱歉，您的付款无法处理。请重试或联系支持。",
+        "tryAgain": "重试",
+        "contactSupport": "联系支持"
     },
     "forum": {
         "commentModal": {

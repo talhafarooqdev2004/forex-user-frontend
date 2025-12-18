@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { FaFacebookF, FaEye, FaEyeSlash, FaTimes } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import AppleIcon from '../icons/AppleIcon';
+import { axiosInstance } from '@/lib/config';
 
 interface RegisterModalProps {
   show: boolean;
@@ -24,6 +25,7 @@ const RegisterModal = ({ show, onHide, onSwitchToLogin }: RegisterModalProps) =>
     confirmPassword: '',
     referralCode: '',
   });
+  
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const t = useTranslations('auth');
@@ -32,9 +34,39 @@ const RegisterModal = ({ show, onHide, onSwitchToLogin }: RegisterModalProps) =>
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleRegister = () => {
-    console.log('Register attempt:', formData);
-    onHide();
+  const handleRegister = async () => {
+    if (!isFormValid) {
+      return;
+    }
+    try {
+      const response = await axiosInstance.post('/users/auth/register', {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        gender: formData.gender,
+        password: formData.password,
+        confirmPassword: formData.confirmPassword,
+      });
+      console.log('Registration successful:', response.data);
+      alert('Registration successful!');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        gender: '',
+        password: '',
+        confirmPassword: '',
+        referralCode: '',
+      });
+      onHide();
+    } catch (error) {
+      console.error('Registration failed:', error);
+      alert('Registration failed. Please try again.');
+    }
+  };
+
+  const handleGoogleSignUp = () => {
+    window.location.href = 'http://localhost:5000/api/v1/users/auth/google';
   };
 
   const isFormValid = formData.firstName && formData.lastName &&
@@ -184,7 +216,7 @@ const RegisterModal = ({ show, onHide, onSwitchToLogin }: RegisterModalProps) =>
               <FaFacebookF style={{ background: '#1877F2', color: 'white', borderRadius: '50%', padding: '5px', fontSize: '24px' }} />
             </button>
 
-            <button className={`${styles.socialButton} ${styles.google}`}>
+            <button type="button" className={`${styles.socialButton} ${styles.google}`} onClick={handleGoogleSignUp}>
               <FcGoogle />
             </button>
 

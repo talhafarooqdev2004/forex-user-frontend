@@ -1,89 +1,12 @@
-"use client";
+import { packageService } from "@/services/packageService";
+import { cookies } from 'next/headers';
+import DashboardClient from "./DashboardClient";
 
-import { useState } from 'react';
-import Header from '@/components/dashboard/Header';
-import Aside from '@/components/dashboard/Aside';
-import styles from './dashboard.module.scss';
-import '@/styles/dashboard-override.scss';
-import ProfileCard from '@/components/dashboard/ProfileCard';
-import SubscriptionAlert from '@/components/dashboard/SubscriptionAlert';
-import MembershipSubscriptionPlans from '@/components/dashboard/MembershipSubscriptionPlans';
-import TradingNews from '@/components/dashboard/TradingNews';
-import { FiMenu, FiX } from 'react-icons/fi';
+export default async function Dashboard() {
+    const cookieStore = await cookies();
+    const locale = cookieStore.get('locale')?.value || 'en';
 
-export default function Dashboard() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const subscriptionPackages = await packageService.getPackages(locale);
 
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
-
-    const closeSidebar = () => {
-        setIsSidebarOpen(false);
-    };
-
-    return (
-        <>
-            <div className={styles["dashboard"]}>
-                {/* Mobile Overlay */}
-                <div
-                    className={`${styles["sidebar-overlay"]} ${isSidebarOpen ? styles["sidebar-overlay--open"] : ""}`}
-                    onClick={closeSidebar}
-                />
-
-                {/* Sidebar */}
-                <div className={`${styles["sidebar"]} ${styles["sidebar-bg-dark"]} ${isSidebarOpen ? styles["sidebar--open"] : ""}`}>
-                    <Aside onClose={closeSidebar} />
-                </div>
-
-                <div className={styles["dashboard__panel"]}>
-                    <Header
-                        className={`${styles["dashboard-header"]} ${styles["dashboard-header--bg-light"]}`}
-                        headingClassName={`${styles["dashboard-header__heading"]} ${styles["text-primary"]}`}
-                        actionsClassName={styles["dashboard-header__actions"]}
-                        notificationClassName={styles["dashboard-header__notification"]}
-                        notificationImgClassName={styles["dashboard-header__notification-img"]}
-                        notificationIndicatorClassName={styles["dashboard-header__notification__indicator"]}
-                        profileNavigationClassName={styles["dashboard-header__profile-navigation"]}
-                        profileImgWrapperClassName={styles["dashboard-header__profile-img-wrapper"]}
-                        profileImgClassName={styles["dashboard-header__profile-img"]}
-                        profileInfoClassName={styles["dashboard-header__profile-info"]}
-                        userNameClassName={styles["dashbard-header__user-name"]}
-                        userRoleClassName={styles["dashboard-header__user-role"]}
-                        downArrowClassName={styles["down-arrow"]}
-                    >
-                        {/* Mobile Hamburger Menu */}
-                        <button
-                            className={styles["mobile-menu-toggle"]}
-                            onClick={toggleSidebar}
-                            aria-label="Toggle mobile menu"
-                        >
-                            {isSidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-                        </button>
-                    </Header>
-                    <main className={styles["dashboard__content"]}>
-                        <div className={styles["dashboard__account-overview"]}>
-                            <ProfileCard
-                                name="Ali Hassan"
-                                email="alih@gmail.com"
-                                phone="+92-352-5554444"
-                                profileImg="/images/dashboard/account-profile.jpg"
-                                emailIcon="/images/dashboard/gmail-icon.svg"
-                                phoneIcon="/images/dashboard/phone-icon.svg"
-                            />
-                            <SubscriptionAlert
-                                userName="Ali Hassan"
-                                subscriptionName="Silver Membership"
-                                validityDays={30}
-                                freeDays={10}
-                                expiryDate="21 / 08 / 2024 – 11:59 PM"
-                            />
-                        </div>
-                        <MembershipSubscriptionPlans />
-                        <TradingNews />
-                    </main>
-                </div>
-            </div>
-        </>
-    );
+    return <DashboardClient subscriptionPackages={subscriptionPackages} />;
 }

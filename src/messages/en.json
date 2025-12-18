@@ -50,7 +50,9 @@
         "passwordsDoNotMatch": "Passwords do not match",
         "referralCode": "Enter Referral Code",
         "hasAccount": "Already have an account?",
-        "loginLink": "Login"
+        "loginLink": "Login",
+        "loading": "Loading...",
+        "loginWithGoogle": "Login with Google"
     },
     "trading": {
         "buy": "Buy",
@@ -254,6 +256,7 @@
         },
         "education": {
             "title": "EDUCATION",
+            "learnMore": "Learn more",
             "shortDescription": {
                 "before": "Here's our",
                 "highlight1": "advice",
@@ -305,6 +308,36 @@
         "phone": "Phone",
         "allRightsReserved": "All rights reserved."
     },
+    "package": {
+        "USD": "USD",
+        "duration": "Duration",
+        "free": "Free",
+        "days": "Days",
+        "monthly": "montly",
+        "membership": "Membership",
+        "subscribe": "Subscribe",
+        "selectPaymentMethod": "Select Payment Method",
+        "proceedToPayment": "Proceed to Payment",
+        "orderSummary": "Order Summary",
+        "paymentMethod": "Payment Method",
+        "back": "Back to Packages",
+        "processing": "Processing...",
+        "enterCardDetails": "Enter Card Details",
+        "redirectingToJazzCash": "Redirecting to JazzCash",
+        "jazzcashRedirectMessage": "You will be redirected to JazzCash to complete your payment.",
+        "continueToJazzCash": "Continue to JazzCash",
+        "paymentSuccess": "Payment Successful!",
+        "paymentSuccessMessage": "Your payment has been processed successfully. Your subscription is now active.",
+        "transactionId": "Transaction ID",
+        "goToDashboard": "Go to Dashboard",
+        "backToPackages": "Back to Packages",
+        "redirectingIn": "Redirecting to dashboard in",
+        "seconds": "seconds",
+        "paymentFailed": "Payment Failed",
+        "paymentFailedMessage": "Unfortunately, your payment could not be processed. Please try again or contact support.",
+        "tryAgain": "Try Again",
+        "contactSupport": "Contact Support"
+    },
     "forum": {
         "commentModal": {
             "title": "COMMENT!",
@@ -354,5 +387,18 @@
             "title": "Our Team",
             "description": "Our diverse team of analysts, developers, and financial experts work together to provide you with the most accurate and actionable trading insights. With decades of combined experience in forex markets, we understand what it takes to succeed in this dynamic environment."
         }
+    },
+    "dashboard": {
+        "scoreBoard": "Score Board",
+        "userRole": "User",
+        "profile": "Profile",
+        "settings": "Settings",
+        "notifications": "Notifications",
+        "accountOverview": "Account Overview",
+        "subscription": "Subscription",
+        "membership": "Membership",
+        "tradingNews": "Trading News",
+        "welcome": "Welcome",
+        "backToDashboard": "Back to Dashboard"
     }
 }

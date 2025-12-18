@@ -1,0 +1,44 @@
+@use "../../styles/mixins.scss" as *;
+
+.paymentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.cardElementWrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.errorMessage {
+    background-color: rgba(220, 38, 38, 0.2);
+    color: #fca5a5;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.submitButton {
+    background-color: #019042;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover:not(:disabled) {
+        background-color: #017a35;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+

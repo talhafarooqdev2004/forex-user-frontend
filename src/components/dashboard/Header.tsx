@@ -1,5 +1,9 @@
+'use client';
+
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
+import { useTranslations } from 'next-intl';
 
 type HeaderProps = {
     className?: string;
@@ -34,13 +38,19 @@ export default function Header({
     downArrowClassName = '',
     children
 }: HeaderProps = {}) {
+    const { user } = useAuth();
+    const t = useTranslations('dashboard');
+
+    const userName = user ? `${user.firstName} ${user.lastName}` : '';
+    const userRole = t('userRole') || 'User';
+
     return (
         <>
             <header className={`${className}`}>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     {children}
                     <h1 className={`${headingClassName}`}>
-                        Score Board!
+                        {t('scoreBoard') || 'Score Board!'}
                     </h1>
                 </div>
                 <div className={`${actionsClassName}`}>
@@ -64,8 +74,8 @@ export default function Header({
                             />
                         </div>
                         <div className={`${profileInfoClassName}`}>
-                            <span className={`${userNameClassName}`}>Musfiq</span>
-                            <span className={`${userRoleClassName}`}>Admin</span>
+                            <span className={`${userNameClassName}`}>{userName}</span>
+                            <span className={`${userRoleClassName}`}>{userRole}</span>
                         </div>
 
                         <svg

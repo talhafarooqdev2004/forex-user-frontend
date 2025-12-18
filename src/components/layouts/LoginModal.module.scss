@@ -192,3 +192,63 @@
     color: white !important;
   }
 }
+
+.dividerContainer {
+  display: flex !important;
+  align-items: center !important;
+  margin: 1.4rem 0 !important;
+  width: 100% !important;
+
+  .dividerLine {
+    flex: 1 !important;
+    height: 1px !important;
+    background-color: #ccc !important;
+  }
+
+  .dividerText {
+    font-size: 15px !important;
+    color: #000000 !important;
+    padding: 0 1rem !important;
+    white-space: nowrap !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+  }
+}
+
+.socialButtons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  margin-bottom: 1.1rem !important;
+
+  .socialButton {
+    flex: 1 1 0;
+    width: 100px !important;
+    height: 55px !important;
+    border: 1px solid #000 !important;
+    border-radius: 8px !important;
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease !important;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    &:disabled {
+      opacity: 0.6 !important;
+      cursor: not-allowed !important;
+    }
+
+    &.google {
+      svg {
+        width: 24px !important;
+        height: 24px !important;
+      }
+    }
+  }
+}

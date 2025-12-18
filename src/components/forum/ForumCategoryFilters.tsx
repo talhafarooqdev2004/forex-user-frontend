@@ -1,58 +1,48 @@
+import { TopicDTO } from '@/types/results/TopicsIndexResultDTO';
 import styles from './ForumCategoryFilters.module.scss';
 import { useRouter } from 'next/navigation';
 
 type ForumCategoryFiltersProps = {
-    activeCategory: string;
-    onCategoryChange: (category: string) => void;
+    topics: TopicDTO[] | [];
+    activeTopicId: number;
+    onTopicChange?: (topicId: number) => void;
     navigateToForum?: boolean;
 }
 
-const categories = [
-    'Trading Discussions',
-    'Trading Strategies',
-    'Broker Reviews',
-    'Trading Journals',
-    'Market Analysis',
-    'Technical Analysis',
-    'Fundamental Analysis',
-    'Risk Management',
-    'Trading Psychology',
-    'Market News'
-];
-
 export default function ForumCategoryFilters({
-    activeCategory,
-    onCategoryChange,
+    topics,
+    activeTopicId,
+    onTopicChange,
     navigateToForum = false
 }: ForumCategoryFiltersProps) {
     const router = useRouter();
 
-    const handleCategoryClick = (category: string) => {
+    const handleTopicClick = (topicId: number) => {
+        if (topicId === activeTopicId) {
+            return; // Don't do anything if clicking the same topic
+        }
+
         if (navigateToForum) {
-            // Navigate to forum page with category as URL parameter
-            router.push(`/forum?category=${encodeURIComponent(category)}`);
-        } else {
-            // Normal category change behavior
-            onCategoryChange(category);
+            // Navigate to forum page with topic filter
+            router.push(`/forum?topicId=${topicId}`);
+        } else if (onTopicChange) {
+            // Call the callback if provided
+            onTopicChange(topicId);
         }
     };
 
     return (
         <div className={styles['forum-category-filters']}>
-            {/* {navigateToForum && (
-                <div className={styles['forum-category-filters__hint']}>
-                    <span>Click any category to browse all posts in that category</span>
-                </div>
-            )} */}
+
             <div className={styles['forum-category-filters__row']}>
-                {categories.map((category) => (
+                {topics?.map((topic) => (
                     <button
-                        key={category}
-                        className={`${styles['forum-category-filters__button']} ${activeCategory === category ? styles['forum-category-filters__button--active'] : ''
+                        key={topic.id}
+                        className={`${styles['forum-category-filters__button']} ${activeTopicId === topic.id ? styles['forum-category-filters__button--active'] : ''
                             }`}
-                        onClick={() => handleCategoryClick(category)}
+                        onClick={() => handleTopicClick(topic.id)}
                     >
-                        <span>{category}</span>
+                        <span>{topic.translation.title}</span>
                     </button>
                 ))}
             </div>

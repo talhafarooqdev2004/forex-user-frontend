@@ -1,0 +1,104 @@
+@use "../../styles/mixins.scss" as *;
+
+.single-education-card {
+    &__content-wrapper {
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 2rem; // 20px converted to rem
+        border-top: 4px solid #9e0000;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; // 15px converted to rem
+        line-height: 3rem;
+
+        @include tablet {
+            padding: 1.5rem;
+            gap: 1.2rem;
+        }
+
+        @include mobile {
+            padding: 1rem;
+            gap: 1rem;
+        }
+    }
+
+    &__content {
+        background-color: #f2f2f2;
+        border-radius: 1rem; // 10px converted to rem
+        padding: 1.5rem 3rem; // 15px 30px converted to rem
+
+        @include tablet {
+            padding: 1.2rem 2rem;
+        }
+
+        @include mobile {
+            padding: 1rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 2rem; // 20px converted to rem
+
+        @include tablet {
+            gap: 1.5rem;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+    }
+
+    &__title {
+        color: #4D44B5 !important;
+        font-size: 2rem; // 20px converted to rem
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 1.5rem;
+
+        @include tablet {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        @include mobile {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__body {
+        margin-top: 1rem; // 10px converted to rem
+
+        @include mobile {
+            margin-top: 0.8rem;
+        }
+    }
+
+    &__content-text {
+        // Preserve admin editor styles - only apply minimal base styles
+        // Don't override styles that come from the editor
+
+        // Ensure br tags have proper spacing (professional approach)
+        :global {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            // Add spacing for br tags using line-height
+            // Double br tags will naturally create more spacing
+            p {
+                line-height: 1.8;
+
+                // Ensure br tags create visible line breaks
+                br {
+                    line-height: 1.8;
+                }
+            }
+        }
+    }
+}

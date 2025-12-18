@@ -1,5 +1,7 @@
 import { LanguageProvider } from '@/components/LanguageProvider';
 import { IntlProvider } from '@/components/IntlProvider';
+import { AuthProvider } from '@/contexts/AuthContext';
+import { AuthModalProvider } from '@/contexts/AuthModalContext';
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { getLocaleFromCookie } from '@/i18n/config';
@@ -34,11 +36,15 @@ export default async function RootLayout({
 
     return (
         <Layout locale={locale} fonts={fonts}>
-            <LanguageProvider>
-                <IntlProvider initialLocale={locale}>
-                    {children}
-                </IntlProvider>
-            </LanguageProvider>
+            <AuthProvider>
+                <AuthModalProvider>
+                    <LanguageProvider>
+                        <IntlProvider initialLocale={locale}>
+                            {children}
+                        </IntlProvider>
+                    </LanguageProvider>
+                </AuthModalProvider>
+            </AuthProvider>
         </Layout>
     );
 } 

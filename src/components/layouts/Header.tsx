@@ -7,14 +7,16 @@ import { NavBar } from './NavBar';
 import { useLanguage } from '../../components/LanguageProvider';
 import { useTranslations } from 'next-intl';
 import { FiChevronDown, FiMenu } from 'react-icons/fi';
+import { useAuth } from '@/contexts/AuthContext';
+import { useAuthModal } from '@/contexts/AuthModalContext';
 import LoginModal from './LoginModal';
 import RegisterModal from './RegisterModal';
 
 export function Header() {
     const { currentLanguage, changeLanguage } = useLanguage();
     const t = useTranslations();
-    const [showLoginModal, setShowLoginModal] = useState(false);
-    const [showRegisterModal, setShowRegisterModal] = useState(false);
+    const { user, logout } = useAuth();
+    const { modalType, openLoginModal, openRegisterModal, closeModal } = useAuthModal();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const languages = [
@@ -45,13 +47,13 @@ export function Header() {
     };
 
     const handleSwitchToRegister = () => {
-        setShowLoginModal(false);
-        setShowRegisterModal(true);
+        closeModal();
+        openRegisterModal();
     };
 
     const handleSwitchToLogin = () => {
-        setShowRegisterModal(false);
-        setShowLoginModal(true);
+        closeModal();
+        openLoginModal();
     };
 
     const handleCloseMenu = () => {
@@ -113,23 +115,32 @@ export function Header() {
                         </Dropdown.Menu>
                     </Dropdown>
                     <div>
-                        <button
-                            className={styles.loginBtn}
-                            onClick={() => setShowLoginModal(true)}
-                        >
-                            {t('auth.login')}
-                        </button>
+                        {user ? (
+                            <button
+                                className={styles.loginBtn}
+                                onClick={logout}
+                            >
+                                {t('auth.logout')}
+                            </button>
+                        ) : (
+                            <button
+                                className={styles.loginBtn}
+                                onClick={openLoginModal}
+                            >
+                                {t('auth.login')}
+                            </button>
+                        )}
                     </div>
 
                     <LoginModal
-                        show={showLoginModal}
-                        onHide={() => setShowLoginModal(false)}
+                        show={modalType === 'login'}
+                        onHide={closeModal}
                         onSwitchToRegister={handleSwitchToRegister}
                     />
 
                     <RegisterModal
-                        show={showRegisterModal}
-                        onHide={() => setShowRegisterModal(false)}
+                        show={modalType === 'register'}
+                        onHide={closeModal}
                         onSwitchToLogin={handleSwitchToLogin}
                     />
                 </div>
