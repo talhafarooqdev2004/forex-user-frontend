@@ -64,7 +64,7 @@ export function NewsEvents() {
                                     </div>
                                     <div className={styles.newsEventsArticleCardContent}>
                                         <p className={styles.cardDescription}>
-                                            At <Highlight>Forex Fundamental Edge</Highlight>, we bring you
+                                            At <Highlight>Forex Fundamental Trends</Highlight>, we bring you
                                             the latest market-moving news and events that impact currency trading.
                                         </p>
                                     </div>
@@ -93,7 +93,7 @@ export function NewsEvents() {
                                     </div>
                                     <div className={styles.newsEventsArticleCardContent}>
                                         <p className={styles.cardDescription}>
-                                            At <Highlight>Forex Fundamental Edge</Highlight>, we bring you
+                                            At <Highlight>Forex Fundamental Trends</Highlight>, we bring you
                                             the latest market-moving news and events that impact currency trading.
                                         </p>
                                     </div>

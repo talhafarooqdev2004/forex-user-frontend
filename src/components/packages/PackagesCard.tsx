@@ -19,16 +19,17 @@ export default function PackagesCard(packageDTO: PackageDTO) {
     const freeTrialDays = Math.floor(packageDTO.freeTrialHours / 24);
     const planType = packageDTO.translation.name.toLowerCase();
 
-    const handleSubscribe = () => {
-        if (!user) {
-            // Show login modal if user is not logged in
-            openModal('login');
-            return;
-        }
+    // Commented out subscribe button functionality
+    // const handleSubscribe = () => {
+    //     if (!user) {
+    //         // Show login modal if user is not logged in
+    //         openModal('login');
+    //         return;
+    //     }
 
-        // Show payment gateway selection modal
-        setShowPaymentModal(true);
-    };
+    //     // Show payment gateway selection modal
+    //     setShowPaymentModal(true);
+    // };
 
     return (
         <>
@@ -63,21 +64,23 @@ export default function PackagesCard(packageDTO: PackageDTO) {
                 </div>
 
                 <footer className={styles["packages-card__footer"]}>
-                    <button 
+                    {/* Subscribe button commented out */}
+                    {/* <button 
                         className={styles["packages-card__subscribe-btn"]}
                         onClick={handleSubscribe}
                     >
                         {t("subscribe")}
-                    </button>
+                    </button> */}
                 </footer>
             </div>
 
-            <PaymentGatewayModal
+            {/* PaymentGatewayModal commented out - subscribe button disabled */}
+            {/* <PaymentGatewayModal
                 show={showPaymentModal}
                 onHide={() => setShowPaymentModal(false)}
                 packageId={packageDTO.id}
                 packagePrice={parseFloat(packageDTO.price.toString())}
-            />
+            /> */}
         </>
     );
 }

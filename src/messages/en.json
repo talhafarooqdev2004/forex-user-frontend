@@ -72,14 +72,14 @@
     "hero": {
         "welcome": "Welcome",
         "to": "to",
-        "brandName": "Forex Fundamental Edge",
+        "brandName": "Forex Fundamental Trends",
         "yourGateway": "Your Gateway",
         "smartTrading": "Smart Forex Trading",
         "secondaryText": {
             "before": "In the fast-paced world of",
             "highlight1": "Forex trading",
             "between1": ", having a solid foundation of knowledge is the key to success. At",
-            "highlight2": "Forex Fundamental Edge",
+            "highlight2": "Forex Fundamental Trends",
             "between2": ", We're dedicated to empowering traders like you with the",
             "highlight3": "insights and tools",
             "between3": "needed to make informed decisions in the",
@@ -89,7 +89,7 @@
     },
     "fundamentalAnalysis": {
         "title": "Fundamental Analysis",
-        "description": "At Forex Fundamental Edge, The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control.",
+        "description": "At Forex Fundamental Trends, The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control.",
         "cotButton": "COT",
         "menuItems": {
             "fundamentalBias": "FUNDAMENTAL BIAS",
@@ -138,7 +138,7 @@
     "welcome": {
         "title": "Welcome",
         "to": "to",
-        "brandName": "Forex Fundamental Edge",
+        "brandName": "Forex Fundamental Trends",
         "gateway": "Your Gateway",
         "smartTrading": "Smart Forex Trading"
     },
@@ -148,7 +148,7 @@
             "cotButtonAriaLabel": "COT Analysis",
             "description": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others act the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "chartAltText": "Technical analysis chart"
@@ -160,7 +160,7 @@
             "chartAltText": "Market overview chart",
             "description": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others act the way they do because of who they are, rather than because of circumstances beyond their control."
             }
         },
@@ -184,12 +184,12 @@
             "title": "Fundamental Edge",
             "primaryDescription": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "after": "we offer a comprehensive set of tools and insights to enhance your trading strategy"
             },
             "secondaryDescription": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "imageAlt": "Fundamental Edge Insight"
@@ -203,7 +203,7 @@
             },
             "secondaryDescription": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "imageAlt": "Fundamental Heatmap Insight"
@@ -217,7 +217,7 @@
             },
             "secondaryDescription": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "imageAlt": "Currency Fundamental Analysis"
@@ -239,7 +239,7 @@
                     "altText": "Risk on/off indicator",
                     "description": {
                         "before": "At",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
                     }
                 },
@@ -248,7 +248,7 @@
                     "chartAltText": "Retail positions chart",
                     "description": {
                         "before": "At",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
                     }
                 }
@@ -266,7 +266,7 @@
             },
             "footerDescription": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             }
         },
@@ -280,7 +280,7 @@
             },
             "description": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "imageAlt": "Technical Heatmap"
@@ -290,7 +290,7 @@
             "titleHighlight": "Strength Meter",
             "description": {
                 "before": "At",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "The Fundamental attribution error is a cognitive bias where individuals tend to overemphasize personality traits when explaining the behavior of others, while underemphasizing situational factors that might have influenced their actions. In simpler terms, we often assume others are acting the way they do because of who they are, rather than because of circumstances beyond their control."
             },
             "imageAlt": "Currency Strength Meter"
@@ -350,7 +350,7 @@
         "subtitle": "Empowering traders with comprehensive market insights and professional trading tools",
         "ourMission": {
             "title": "Our Mission",
-            "description": "At Forex Fundamental Edge, our mission is to democratize access to professional-grade forex trading insights and tools. We believe that every trader, regardless of experience level, deserves access to the same high-quality fundamental and technical analysis that institutional traders rely on."
+            "description": "At Forex Fundamental Trends, our mission is to democratize access to professional-grade forex trading insights and tools. We believe that every trader, regardless of experience level, deserves access to the same high-quality fundamental and technical analysis that institutional traders rely on."
         },
         "whatWeDo": {
             "title": "What We Do",

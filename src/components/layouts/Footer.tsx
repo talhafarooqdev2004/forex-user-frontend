@@ -12,7 +12,7 @@ export function Footer() {
         <footer className={styles.footer}>
             <div className={styles.footerContent}>
                 <div className={styles.footerSection}>
-                    <h3 className={styles.footerLogo}>Forex Fundamental Edge</h3>
+                    <h3 className={styles.footerLogo}>Forex Fundamental Trends</h3>
                     <p className={styles.footerDescription}>
                         {t('description')}
                     </p>
@@ -38,7 +38,7 @@ export function Footer() {
             </div>
 
             <div className={styles.footerBottom}>
-                <p>&copy; 2024 Forex Fundamental Edge. {t('allRightsReserved')}</p>
+                <p>&copy; 2024 Forex Fundamental Trends. {t('allRightsReserved')}</p>
             </div>
         </footer>
     );

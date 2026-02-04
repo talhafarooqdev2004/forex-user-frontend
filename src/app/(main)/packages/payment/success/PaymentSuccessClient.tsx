@@ -34,7 +34,9 @@ export default function PaymentSuccessClient({
             setCountdown((prev) => {
                 if (prev <= 1) {
                     clearInterval(timer);
-                    router.push('/dashboard');
+                    // Redirect to admin dashboard (forex-admin app)
+                    const adminDashboardUrl = process.env.NEXT_PUBLIC_ADMIN_DASHBOARD_URL || 'http://localhost:3001/dashboard';
+                    window.location.href = adminDashboardUrl;
                     return 0;
                 }
                 return prev - 1;
@@ -63,7 +65,10 @@ export default function PaymentSuccessClient({
                     <div className={styles.actionButtons}>
                         <button
                             className={styles.dashboardButton}
-                            onClick={() => router.push('/dashboard')}
+                            onClick={() => {
+                                const adminDashboardUrl = process.env.NEXT_PUBLIC_ADMIN_DASHBOARD_URL || 'http://localhost:3001/dashboard';
+                                window.location.href = adminDashboardUrl;
+                            }}
                         >
                             {t('goToDashboard') || 'Go to Dashboard'}
                         </button>

@@ -2,12 +2,10 @@
 
 import { useEffect, Suspense, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
 
 const GoogleAuthCallback = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { login } = useAuth();
   const hasProcessed = useRef(false);
 
   useEffect(() => {
@@ -22,24 +20,28 @@ const GoogleAuthCallback = () => {
     if (token) {
       hasProcessed.current = true;
       
-      login(token)
-        .then(() => {
-          console.log('Login successful, redirecting to dashboard');
-          router.push('/dashboard');
-        })
-        .catch((error) => {
-          console.error('Login failed:', error);
-          hasProcessed.current = false; // Allow retry on error
-          alert('Authentication failed. Please try again.');
-          router.push('/');
-        });
+      try {
+        // Store token in localStorage (forex-admin will handle user fetching)
+        localStorage.setItem('authToken', token);
+        console.log('Token stored, redirecting to admin dashboard');
+        
+        // Redirect immediately to admin dashboard (forex-admin app)
+        // The admin app will fetch user data when it loads
+        const adminDashboardUrl = process.env.NEXT_PUBLIC_ADMIN_DASHBOARD_URL || 'http://localhost:3001/dashboard';
+        window.location.href = adminDashboardUrl;
+      } catch (error) {
+        console.error('Failed to store token:', error);
+        hasProcessed.current = false; // Allow retry on error
+        alert('Authentication failed. Please try again.');
+        router.push('/');
+      }
     } else {
       console.error('No token in callback URL');
       hasProcessed.current = true;
       alert('Authentication failed. No token received.');
       router.push('/');
     }
-  }, [router, searchParams, login]);
+  }, [router, searchParams]);
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>

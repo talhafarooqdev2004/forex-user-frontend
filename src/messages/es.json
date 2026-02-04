@@ -70,14 +70,14 @@
     "hero": {
         "welcome": "Bienvenido",
         "to": "a",
-        "brandName": "Forex Fundamental Edge",
+        "brandName": "Forex Fundamental Trends",
         "yourGateway": "Tu Puerta de Entrada",
         "smartTrading": "al Trading Inteligente de Forex",
         "secondaryText": {
             "before": "En el mundo acelerado del",
             "highlight1": "trading de Forex",
             "between1": ", tener una base sólida de conocimientos es la clave del éxito. En",
-            "highlight2": "Forex Fundamental Edge",
+            "highlight2": "Forex Fundamental Trends",
             "between2": ", nos dedicamos a empoderar a traders como tú con las",
             "highlight3": "herramientas y conocimientos",
             "between3": "necesarias para tomar decisiones informadas en los",
@@ -87,7 +87,7 @@
     },
     "fundamentalAnalysis": {
         "title": "Análisis Fundamental",
-        "description": "En Forex Fundamental Edge, el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control.",
+        "description": "En Forex Fundamental Trends, el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control.",
         "cotButton": "COT",
         "menuItems": {
             "fundamentalBias": "SESGO FUNDAMENTAL",
@@ -136,7 +136,7 @@
     "welcome": {
         "title": "Bienvenido",
         "to": "a",
-        "brandName": "Forex Fundamental Edge",
+        "brandName": "Forex Fundamental Trends",
         "gateway": "Tu Puerta de Entrada",
         "smartTrading": "Trading Inteligente de Forex"
     },
@@ -146,7 +146,7 @@
             "cotButtonAriaLabel": "Análisis COT",
             "description": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde los individuos tienden a sobreenfatizar los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de la manera en que lo hacen debido a quiénes son, en lugar de debido a las circunstancias fuera de su control."
             },
             "chartAltText": "Gráfico de análisis técnico"
@@ -158,7 +158,7 @@
             "chartAltText": "Gráfico de visión general del mercado",
             "description": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "proporcionamos un análisis completo del mercado para ayudar a los traders a comprender los movimientos globales de divisas y tomar decisiones comerciales informadas. Nuestra visión general del mercado combina indicadores técnicos, datos fundamentales y sentimiento del mercado en tiempo real para ofrecerle una imagen completa de las condiciones actuales del mercado."
             }
         },
@@ -182,12 +182,12 @@
             "title": "Ventaja Fundamental",
             "primaryDescription": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "after": "ofrecemos un conjunto completo de herramientas y conocimientos para mejorar su estrategia de trading"
             },
             "secondaryDescription": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control."
             },
             "imageAlt": "Análisis de Ventaja Fundamental"
@@ -201,7 +201,7 @@
             },
             "secondaryDescription": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control."
             },
             "imageAlt": "Análisis de Mapa de Calor Fundamental"
@@ -215,7 +215,7 @@
             },
             "secondaryDescription": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "El error de atribución fundamental es un sesgo cognitivo donde los individuos tienden a sobreenfatizar los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de la manera en que lo hacen debido a quiénes son, en lugar de debido a las circunstancias fuera de su control."
             },
             "imageAlt": "Análisis Fundamental de Divisas"
@@ -237,7 +237,7 @@
                     "altText": "Indicador de riesgo on/off",
                     "description": {
                         "before": "En",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "El error de atribución fundamental es un sesgo cognitivo donde los individuos tienden a sobreenfatizar los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de la manera en que lo hacen debido a quiénes son, en lugar de debido a las circunstancias fuera de su control."
                     }
                 },
@@ -246,7 +246,7 @@
                     "chartAltText": "Gráfico de posiciones minoristas",
                     "description": {
                         "before": "En",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "El error de atribución fundamental es un sesgo cognitivo donde los individuos tienden a sobreenfatizar los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de la manera en que lo hacen debido a quiénes son, en lugar de debido a las circunstancias fuera de su control."
                     }
                 }
@@ -264,7 +264,7 @@
             },
             "footerDescription": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control."
             }
         },
@@ -278,7 +278,7 @@
             },
             "description": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control."
             },
             "imageAlt": "Mapa de Calor Técnico"
@@ -288,7 +288,7 @@
             "titleHighlight": "de Divisas",
             "description": {
                 "before": "En",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "el error de atribución fundamental es un sesgo cognitivo donde las personas tienden a enfatizar demasiado los rasgos de personalidad al explicar el comportamiento de otros, mientras subestiman los factores situacionales que podrían haber influido en sus acciones. En términos más simples, a menudo asumimos que otros actúan de cierta manera debido a quiénes son, en lugar de debido a circunstancias fuera de su control."
             },
             "imageAlt": "Medidor de Fuerza de Divisas"
@@ -348,7 +348,7 @@
         "subtitle": "Empoderando a los traders con análisis de mercado integral y herramientas de trading profesionales",
         "ourMission": {
             "title": "Nuestra Misión",
-            "description": "En Forex Fundamental Edge, nuestra misión es democratizar el acceso a herramientas y análisis de trading de forex de grado profesional. Creemos que cada trader, independientemente de su nivel de experiencia, merece acceso al mismo análisis fundamental y técnico de alta calidad en el que confían los traders institucionales."
+            "description": "En Forex Fundamental Trends, nuestra misión es democratizar el acceso a herramientas y análisis de trading de forex de grado profesional. Creemos que cada trader, independientemente de su nivel de experiencia, merece acceso al mismo análisis fundamental y técnico de alta calidad en el que confían los traders institucionales."
         },
         "whatWeDo": {
             "title": "Lo Que Hacemos",

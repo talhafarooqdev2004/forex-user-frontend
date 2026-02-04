@@ -41,10 +41,19 @@ const LoginModal = ({ show, onHide, onSwitchToRegister }: LoginModalProps) => {
       });
 
       if (response.data.success && response.data.data?.token) {
-        await login(response.data.data.token);
+        const token = response.data.data.token;
+        await login(token);
         setEmail('');
         setPassword('');
-        onHide();
+        
+        // Sync to port 3000 (dashboard) if on localhost
+        if (window.location.hostname === 'localhost') {
+          const dashboardUrl = 'http://localhost:3000/dashboard';
+          // Use the sync route on port 3000 to share the token
+          window.location.href = `http://localhost:3000/auth/sync?token=${token}&redirect=${encodeURIComponent(dashboardUrl)}`;
+        } else {
+          onHide();
+        }
       } else {
         setError('Login failed. Please try again.');
       }

@@ -36,9 +36,9 @@ export default function MembershipSubscriptionPlanCard(
                     >
                     </textarea>
                 </div>
-                <footer className={styles["subscription-plan-card__footer"]}>
+                {/* <footer className={styles["subscription-plan-card__footer"]}>
                     <button className={styles["subscription-plan-card__subscribe-btn"]}>SUBSCRIBE</button>
-                </footer>
+                </footer> */}
             </div>
         </>
     );

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from 'next/image';
 import Dropdown from 'react-bootstrap/Dropdown';
 import styles from './Header.module.scss';
 import { NavBar } from './NavBar';
@@ -64,6 +65,14 @@ export function Header() {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    const handleLogout = () => {
+        logout();
+        if (window.location.hostname === 'localhost') {
+            // Sync logout to port 3000
+            window.location.href = 'http://localhost:3000/auth/sync?logout=true&redirect=' + encodeURIComponent(window.location.origin);
+        }
+    };
+
     return (
         <section>
             <header className={styles.header}>
@@ -77,7 +86,15 @@ export function Header() {
                         <FiMenu size={24} />
                     </button>
 
-                    <div className={styles.headerLogo}>Logo</div>
+                    <div className={styles.headerLogo}>
+                        <Image
+                            src="/images/brand-logo.jpeg"
+                            alt="Brand Logo"
+                            width={120}
+                            height={40}
+                            style={{ objectFit: 'contain' }}
+                        />
+                    </div>
                 </div>
 
                 <NavBar isOpen={mobileMenuOpen} closeMenu={handleCloseMenu} />
@@ -118,7 +135,7 @@ export function Header() {
                         {user ? (
                             <button
                                 className={styles.loginBtn}
-                                onClick={logout}
+                                onClick={handleLogout}
                             >
                                 {t('auth.logout')}
                             </button>

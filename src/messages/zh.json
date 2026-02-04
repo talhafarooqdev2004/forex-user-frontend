@@ -70,14 +70,14 @@
     "hero": {
         "welcome": "欢迎",
         "to": "来到",
-        "brandName": " Forex Fundamental Edge ",
+        "brandName": " Forex Fundamental Trends ",
         "yourGateway": "您的通道",
         "smartTrading": "智能外汇交易",
         "secondaryText": {
             "before": "在瞬息万变的",
             "highlight1": "外汇交易",
             "between1": "世界中，拥有扎实的知识基础是成功的关键。在",
-            "highlight2": " Forex Fundamental Edge ",
+            "highlight2": " Forex Fundamental Trends ",
             "between2": "，我们致力于为像您这样的交易者提供",
             "highlight3": "见解和工具",
             "between3": "，帮助您在",
@@ -87,7 +87,7 @@
     },
     "fundamentalAnalysis": {
         "title": "基本面分析",
-        "description": "在 Forex Fundamental Edge 中，基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行动的情境因素。简单来说，我们经常认为他人的行为方式是由于他们的本性，而不是由于他们无法控制的环境因素。",
+        "description": "在 Forex Fundamental Trends 中，基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行动的情境因素。简单来说，我们经常认为他人的行为方式是由于他们的本性，而不是由于他们无法控制的环境因素。",
         "cotButton": "COT",
         "menuItems": {
             "fundamentalBias": "基本面偏差",
@@ -136,7 +136,7 @@
     "welcome": {
         "title": "欢迎",
         "to": "来到",
-        "brandName": "Forex Fundamental Edge",
+        "brandName": "Forex Fundamental Trends",
         "gateway": "您的通道",
         "smartTrading": "智能外汇交易"
     },
@@ -146,7 +146,7 @@
             "cotButtonAriaLabel": "COT 分析",
             "description": {
                 "before": "在",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             },
             "chartAltText": "技术分析图表"
@@ -158,7 +158,7 @@
             "chartAltText": "市场概览图表",
             "description": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "content": "，我们提供全面的市场分析，帮助交易者理解全球货币走势并做出明智的交易决策。我们的市场概览结合了技术指标、基本面数据和实时市场情绪，为您提供当前市场状况的完整图景。"
             }
         },
@@ -170,7 +170,7 @@
             "viewAll": "查看全部",
             "description": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "content": "，我们为您带来影响货币交易的最新市场动态和事件。通过我们精心筛选的重要财经新闻、经济指标和来自全球可信来源的市场分析，随时掌握市场动向。"
             }
         },
@@ -186,12 +186,12 @@
             "title": "基本面优势",
             "primaryDescription": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "after": "，我们提供全面的工具和见解来提升您的交易策略"
             },
             "secondaryDescription": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "content": "，基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             },
             "imageAlt": "基本面优势分析"
@@ -205,7 +205,7 @@
             },
             "secondaryDescription": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "content": "，基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行动的情境因素。简单来说，我们经常认为他人的行为方式是由于他们的本性，而不是由于他们无法控制的环境因素。"
             },
             "imageAlt": "基本面热图分析"
@@ -219,7 +219,7 @@
             },
             "secondaryDescription": {
                 "before": "在",
-                "highlight": " Forex Fundamental Edge ",
+                "highlight": " Forex Fundamental Trends ",
                 "content": "，基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             },
             "imageAlt": "货币基本面分析"
@@ -241,7 +241,7 @@
                     "altText": "风险开关指标",
                     "description": {
                         "before": "在",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
                     }
                 },
@@ -250,7 +250,7 @@
                     "chartAltText": "零售持仓图表",
                     "description": {
                         "before": "在",
-                        "highlight": "Forex Fundamental Edge",
+                        "highlight": "Forex Fundamental Trends",
                         "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
                     }
                 }
@@ -268,7 +268,7 @@
             },
             "footerDescription": {
                 "before": "在",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             }
         },
@@ -282,7 +282,7 @@
             },
             "description": {
                 "before": "在",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             },
             "imageAlt": "技术热图"
@@ -292,7 +292,7 @@
             "titleHighlight": "强度仪",
             "description": {
                 "before": "在",
-                "highlight": "Forex Fundamental Edge",
+                "highlight": "Forex Fundamental Trends",
                 "content": "基本归因错误是一种认知偏差，人们在解释他人行为时倾向于过分强调个性特征，而低估可能影响其行为的情境因素。简单来说，我们经常认为他人的行为是由于他们的性格，而不是由于他们无法控制的环境因素。"
             },
             "imageAlt": "货币强度仪"
@@ -352,7 +352,7 @@
         "subtitle": "通过全面的市场洞察和专业交易工具赋能交易者",
         "ourMission": {
             "title": "我们的使命",
-            "description": "在 Forex Fundamental Edge，我们的使命是让每个人都能接触到专业级的外汇交易洞察和工具。我们相信，每个交易者，无论经验水平如何，都应该获得机构交易者所依赖的高质量基本面和技术分析。"
+            "description": "在 Forex Fundamental Trends，我们的使命是让每个人都能接触到专业级的外汇交易洞察和工具。我们相信，每个交易者，无论经验水平如何，都应该获得机构交易者所依赖的高质量基本面和技术分析。"
         },
         "whatWeDo": {
             "title": "我们的服务",

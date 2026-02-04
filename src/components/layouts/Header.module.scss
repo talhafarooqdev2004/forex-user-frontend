@@ -14,20 +14,30 @@
 .headerLeft {
     display: flex;
     align-items: center;
-    gap: 1rem; // Gap between hamburger and logo
+    gap: 1rem;
     flex: 0 0 auto;
 }
 
 .headerLogo {
-    font-size: 2.4rem; // 24px converted to rem
+    margin-top: 1rem;
+    font-size: 2.4rem;
     font-weight: bold;
     flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    height: 6rem;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 }
 
 .headerActions {
     display: flex;
     align-items: center;
-    gap: 2.5rem; // 25px converted to rem
+    gap: 2.5rem;
     flex: 0 0 auto;
 
     @include tablet {

@@ -36,7 +36,7 @@ export const TechnicalIndicatorsSection = (): React.ReactElement => {
             title: t('cards.riskOnOff.title'),
             description: (
                 <>
-                    At Forex Fundamental Edge, The Fundamental
+                    At Forex Fundamental Trends, The Fundamental
                     attribution error is a cognititve bias where individuals
                     tend to overemphasize personality traits when
                     eplaining the begaviour of other.
@@ -111,7 +111,7 @@ export const TechnicalIndicatorsSection = (): React.ReactElement => {
             title: t('cards.retailPositions.title'),
             description: (
                 <>
-                    At Forex Fundamental Edge, The Fundamental
+                    At Forex Fundamental Trends, The Fundamental
                     attribution error is a cognititve bias where individuals
                     tend to overemphasize personality traits when
                     eplaining the begaviour of other.
@@ -144,7 +144,7 @@ export const TechnicalIndicatorsSection = (): React.ReactElement => {
                             />
                             {educationalCards[0].content}
                             <div className={styles.fundamentalText}>
-                                <span className={styles.highlight}>At Forex Fundamental Edge</span>, The Fundamental
+                                <span className={styles.highlight}>At Forex Fundamental Trends</span>, The Fundamental
                                 attribution error is a cognititve bias where individuals
                                 tend to overemphasize personality traits when
                                 eplaining the begaviour of other.
@@ -167,7 +167,7 @@ export const TechnicalIndicatorsSection = (): React.ReactElement => {
                             />
                             {educationalCards[1].content}
                             <div className={styles.fundamentalText2}>
-                                <span className={styles.highlight}>At Forex Fundamental Edge</span>, The Fundamental
+                                <span className={styles.highlight}>At Forex Fundamental Trends</span>, The Fundamental
                                 attribution error is a cognititve bias where individuals
                                 tend to overemphasize personality traits when
                                 eplaining the begaviour of other.

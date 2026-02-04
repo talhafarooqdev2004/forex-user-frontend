@@ -1,12 +1,17 @@
-import { packageService } from "@/services/packageService";
-import { cookies } from 'next/headers';
-import DashboardClient from "./DashboardClient";
+'use client';
 
-export default async function Dashboard() {
-    const cookieStore = await cookies();
-    const locale = cookieStore.get('locale')?.value || 'en';
+import { useEffect } from 'react';
 
-    const subscriptionPackages = await packageService.getPackages(locale);
+export default function DashboardRedirect() {
+    useEffect(() => {
+        // Redirect to admin dashboard (forex-admin app)
+        const adminDashboardUrl = process.env.NEXT_PUBLIC_ADMIN_DASHBOARD_URL || 'http://localhost:3001/dashboard';
+        window.location.href = adminDashboardUrl;
+    }, []);
 
-    return <DashboardClient subscriptionPackages={subscriptionPackages} />;
+    return (
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+            <p>Redirecting to dashboard...</p>
+        </div>
+    );
 }
